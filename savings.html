@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; background-color: #D0D0D0; font-family:Century Gothic, Arial, sans-serif">Savings Account Transaction History</h3>
+<table style="font-family:Century Gothic, Arial, sans-serif; margin: auto; max-width: 100%">
+    <thead>
+        <tr>
+            <th style="max-width:35%; padding-right: 3em; color:#1db6e9">Date</th>
+            <th style="max-width:35%; padding-right: 3em; color:#1db6e9">Type</th>
+            <th style="max-width:15%; padding-right: 3em; color:#1db6e9">Amount</th>
+            <th style="max-width:15%; color:#1db6e9">Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for savings_transaction in savings_transactions %}
+            <tr>
+                <td style="max-width:35%; padding-right: 3em">{{ savings_transaction[0] }}</td>
+                <td style="max-width:35%; padding-right: 3em">{{ savings_transaction[1] }}</td>
+                <td style="max-width:15%; padding-right: 3em; text-align: right">${{ '%.2f'|format(savings_transaction[2]) }}</td>
+                <td style="max-width:15%; text-align: right">${{ '%.2f'|format(savings_transaction[3]) }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; background-color: #D0D0D0; font-family: Century Gothic">Transfer Funds</h3>
+<div class="container" style="margin-left:10%">
+    <form action = '/transfer' method="post">
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputEmail1" class="form-label">Transfer Amount</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" name="transfer" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputEmail1" class="form-label">Withdraw From:</label>
+            <select name="from_type" id="from_type">
+                <option value="null"></option>
+                <option value="checking">CHECKING</option>
+                <option value="savings">SAVINGS</option>
+            </select>
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputEmail1" class="form-label">Transfer to:</label>
+            <select name="to_type" id="to_type">
+                <option value="null"></option>
+                <option value="checking">CHECKING</option>
+                <option value="savings">SAVINGS</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="font-family:Century Gothic, Arial, sans-serif">Transfer Funds</button>
+    </form>
+</div>
+{% endblock %}

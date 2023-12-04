@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; background-color: #D0D0D0; font-family: Century Gothic">Client Logout</h3>
+<p style="text-align:center; font-style:italic; font-size:1em; font-weight:bold; color:navy; font-family: Century Gothic">Are you sure you want to logout?</p>
+<div class="container" style="text-align: center; font-family: Century Gothic">
+    <form action="/logout" method="post">
+        <input type="submit" value="Confirm Logout" class="btn btn-primary">
+        <a href="/" style="color: white">Cancel</a>
+    </form>
+</div>
+{% endblock %}

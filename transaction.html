@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; background-color: #D0D0D0; font-family:Century Gothic, Arial, sans-serif">Transaction History</h3>
+<p style="text-align:center; font-family:Century Gothic, Arial, sans-serif">Please select the account for which you would like to review the transaction history.</p>
+<ul style="margin-left:42%; font-family:Century Gothic, Arial, sans-serif">
+    <li class="nav-item" style="font-weight:bold; font-size:1em">
+        <a class="nav-link" href="/checking" style="color:#1db6e9">Checking</a>
+    </li>
+    <li class="nav-item" style="font-weight:bold; font-size:1em">
+        <a class="nav-link" href="/savings" style="color:#1db6e9">Savings</a>
+    </li>
+</ul>
+{% endblock %}

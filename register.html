@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; background-color: #D0D0D0;">Client Registration</h3>
+<div class="container" style="margin-left:10%; font-family: Century Gothic">
+    <form action = '/register' method="post">
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="text" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputFname" class="form-label">First Name</label>
+            <input type="text" name="fname" class="form-control" id="exampleInputFname">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputMname" class="form-label">Middle Name</label>
+            <input type="text" name="mname" class="form-control" id="exampleInputMname">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputLname" class="form-label">Last Name</label>
+            <input type="text" name="lname" class="form-control" id="exampleInputLName">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputDob" class="form-label">Date of Birth</label>
+            <input type="date" name="dob" class="form-control" id="exampleInputDob" dateFormat="yyyy/mm/dd">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputSsn" class="form-label">Social Security Number</label>
+            <input type="text" name="ssn" class="form-control" id="exampleInputSsn">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputPhone" class="form-label">Phone</label>
+            <input type="text" name="phone" class="form-control" id="exampleInputPhone">
+        </div>
+        <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
+            <label for="exampleInputEmail" class="form-label">E-Mail</label>
+            <input type="text" name="email" class="form-control" id="exampleInputEmail">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+{% endblock %}

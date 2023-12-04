@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; background-color: #D0D0D0; font-family: Century Gothic">Deposit Funds</h3>
+<div class="container" style="margin-left:10%; font-family: Century Gothic">
+    <form action = '/deposit' method="post">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Deposit Amount</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" name="deposit" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Account Type</label>
+            <select name="type" id="type">
+                <option value="null"></option>
+                <option value="checking">CHECKING</option>
+                <option value="savings">SAVINGS</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

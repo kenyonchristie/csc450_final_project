@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="margin-left: 3em; margin-right: 3em; margin-top: 3em; margin-bottom: 1em; background-color: #FFFFFF; color:black; border-radius: 8%; padding: 1em; text-align: center; font-family:Century Gothic, Arial, sans-serif">Welcome to Kubera Financial Services Online Banking Portal!</h3>
+<div style="margin-left: 5em; margin-right: 5em; margin-bottom: 0.5em; background-color: #FFFFFF; color:black; border-radius: 8%; padding: 1em; text-align: center; font-family:Century Gothic, Arial, sans-serif">
+    <h5>
+        <inline style="font-style:italic">Existing Client? Click Here to Login: </inline>
+        <inline style="text-align:center" class="nav-item">
+            <a class="nav-link" href="/login" style="color:navy; text-decoration:underline; font-weight:bold">Login</a>
+        </inline>
+    </h5>
+    <h5>
+        <inline style="font-style:italic">New Client? Click Here to Register: </inline>
+        <inline style="text-align:center" class="nav-item">
+            <a class="nav-link" href="/register" style="color:navy; text-decoration:underline; font-weight:bold">Create Account</a>
+        </inline>
+    </h5>
+</div>
+{% endblock %}
