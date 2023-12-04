@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; background-color: #D0D0D0;">Client Registration</h3>
+<h3 style="margin:1em; border-radius:10%; padding:0.25em; font-style:italic; text-align:center; color:#003060; font-family:Century Gothic, Arial, sans-serif; background-color: #D0D0D0;">Client Registration</h3>
 <div class="container" style="margin-left:10%; font-family: Century Gothic">
     <form action = '/register' method="post">
         <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
@@ -29,11 +29,11 @@
         </div>
         <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
             <label for="exampleInputSsn" class="form-label">Social Security Number</label>
-            <input type="text" name="ssn" class="form-control" id="exampleInputSsn">
+            <input type="text" name="ssn" class="form-control" id="exampleInputSsn" pattern="\d{3}-\d{2}-\d{4}" title="Format ###-##-####" required>
         </div>
         <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
             <label for="exampleInputPhone" class="form-label">Phone</label>
-            <input type="text" name="phone" class="form-control" id="exampleInputPhone">
+            <input type="text" name="phone" class="form-control" id="exampleInputPhone" pattern="\d{3}-\d{3}-\d{4}" title="Format ###-###-####" required>
         </div>
         <div class="mb-3" style="font-family:Century Gothic, Arial, sans-serif">
             <label for="exampleInputEmail" class="form-label">E-Mail</label>
