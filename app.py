@@ -129,8 +129,8 @@ def page_login():
         password = request.form['password']
         user = authenticate_user(username, password)
         if user == None:
-            print("Username or Password does not match")
-            return render_template('login.html')            
+            message = f'Username and/or password do not match. Please try again.'
+            return render_template('login.html', message = message)            
         else:
             #session['user'] = user.username
             #print(session['user'])
@@ -258,4 +258,6 @@ def confirm_logout():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
 
